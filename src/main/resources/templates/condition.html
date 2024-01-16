@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional page</title>
+</head>
+<body>
+    <h1>Conditional page</h1>
+    <h1 th:text="${!isActive}?'Active':'Deactive'"></h1>
+    <h1 th:if="${gender} == 'M'">Male</h1>
+    <h1 th:if="${gender} == 'F'">Female</h1>
+
+    <div th:switch="${#lists.size(list)}">
+        <h1 th:case="'0'">List contains zero elements</h1>
+        <h1 th:case="'1'">List contains one elements</h1>
+        <h1 th:case="*">List contains more than one element</h1>
+    </div>
+</body>
+</html>

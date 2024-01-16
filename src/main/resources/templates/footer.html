@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+</head>
+<body>
+    <footer id="fragmentTag" th:fragment="footer1(title, subtitle)">
+        <div class="container">
+            <h1 th:text="${title}"></h1>
+            <h2 th:text="${subtitle}"></h2>
+            <h3>Feel free contact with tanver</h3>
+        </div>
+    </footer>
+</body>
+</html>
